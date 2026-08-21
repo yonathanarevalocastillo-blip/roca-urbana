@@ -1,0 +1,181 @@
+html { 
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f0f0f;
+  color:white;
+  overflow-x:hidden;
+  position: relative;
+}
+
+/* 🔥 MENÚ FLOTANTE */
+.botones{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  padding:15px;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.botones a{
+  color:white;
+  text-decoration:none;
+  background:#222;
+  padding:10px 15px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.botones a:hover{
+  background:red;
+}
+
+/* BOTONES GENERALES */
+.btn{
+  background:#111;
+  color:white;
+  padding:12px 20px;
+  text-decoration:none;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#ff3b3b;
+  transform:scale(1.05);
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:60px 20px 20px;
+  background:linear-gradient(135deg,#111,#1e1e1e);
+  position:relative;
+  z-index:2;
+}
+
+/* LOGO */
+.logo{
+  width:1150px;
+  height:600px;
+  border:5px solid rgb(20,20,20);
+  object-fit:cover;
+  animation: glitch 3s infinite, flicker 4s infinite;
+}
+
+/* GLITCH */
+@keyframes glitch{
+  0%{transform:translate(0);}
+  20%{transform:translate(-2px,2px);}
+  40%{transform:translate(2px,-2px);}
+  60%{transform:translate(-1px,-1px);}
+  80%{transform:translate(1px,2px);}
+  100%{transform:translate(0);}
+}
+
+/* FLICKER */
+@keyframes flicker{
+  0%,100%{
+    filter:brightness(1.1) drop-shadow(0 0 10px rgba(255,0,0,0.5));
+  }
+  50%{
+    filter:brightness(1.3) drop-shadow(0 0 20px rgba(255,0,0,0.8));
+  }
+}
+
+/* PRODUCTOS */
+.productos{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  padding:40px;
+}
+
+/* TARJETAS */
+.card{
+  background:#111;
+  border-radius:15px;
+  width:280px;
+  text-align:center;
+  padding:20px;
+  transition:.3s;
+  position:relative;
+  z-index:2;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 10px 25px rgba(255,0,0,0.3);
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.precio{
+  color:#4da3ff;
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* WHATSAPP BUTTON */
+.btn-comprar{
+  display:inline-block;
+  margin-top:10px;
+  background:#25D366;
+  color:white;
+  padding:10px 15px;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+/* SECCIONES */
+section{
+  padding:60px 20px;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#111;
+  position:relative;
+  z-index:2;
+}
+
+/* 💨 HUMO SUAVE */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255,0,0,0.05), transparent 40%);
+  animation: humo 6s infinite alternate;
+  pointer-events:none;
+  z-index:0;
+}
+
+@keyframes humo{
+  0%{transform:scale(1) translateY(0);}
+  100%{transform:scale(1.1) translateY(-10px);}
+}
