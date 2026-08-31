@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 hombres = [
-    {"nombre": "Urban Black", "precio": "$99.000", "imagen": "/static/3.png"},
+    {"nombre": "Urban Black", "precio": "$99.000", "imagen": "/static/13.png"},
     {"nombre": "White Street", "precio": "$105.000", "imagen": "/static/4.png"},
     {"nombre": "Classic Urban", "precio": "$110.000", "imagen": "/static/5.png"},
     {"nombre": "Classic 1", "precio": "$150.000", "imagen": "/static/6.png"},
