@@ -26,8 +26,16 @@ damas = [
     {"nombre": "NIKE SKATE", "precio": "$100.000", "imagen": "/static/imagen8.png"},
     {"nombre": "ADIDAS SUPER STAR", "precio": "$110.000", "imagen": "/static/imagen9.png"},
     {"nombre": "AIR JORDAN RETRO 1 LOW", "precio": "$105.000", "imagen": "/static/imagen10.png"},
+    {"nombre": "SANDALIA DIOR", "precio": "$120.000", "imagen": "/static/imagen11.png"},
     {"nombre": "ADIDAS SPEZIAL", "precio": "$120.000", "imagen": "/static/imagen12.png"},
     {"nombre": "ADIDAS SAMBA", "precio": "$120.000", "imagen": "/static/imagen13.png"},
+    {"nombre": "ADIDAS PUREBOOST", "precio": "$120.000", "imagen": "/static/imagen14.png"},
+    {"nombre": "NEW BALANCE 574", "precio": "$120.000", "imagen": "/static/imagen15.png"},
+    {"nombre": "NIKE DUNK SB LOW", "precio": "$125.000", "imagen": "/static/imagen16.png"},
+    {"nombre": "AIR JORDAN RETRO 1", "precio": "$125.000", "imagen": "/static/imagen17.png"},
+    {"nombre": "NIKE DUNK SB", "precio": "$120.000", "imagen": "/static/imagen18.png"},
+    {"nombre": "NIKE AIR FORCE ONE", "precio": "$120.000", "imagen": "/static/imagen19.png"},
+    {"nombre": "LECOQ SPORTIF", "precio": "$110.000", "imagen": "/static/imagen20.png"},
 ]
 
 @app.route("/")
