@@ -36,6 +36,9 @@ damas = [
     {"nombre": "NIKE DUNK SB", "precio": "$120.000", "imagen": "/static/imagen18.png"},
     {"nombre": "PUMA PASK", "precio": "$120.000", "imagen": "/static/imagen19.png"},
     {"nombre": "LECOQ SPORTIF", "precio": "$110.000", "imagen": "/static/imagen20.png"},
+    {"nombre": "AIR JORDANRETRO 3", "precio": "$120.000", "imagen": "/static/imagen21.png"},
+    {"nombre": "ADIDAS SAMBA", "precio": "$120.000", "imagen": "/static/imagen22.png"},
+    {"nombre": "NEW BALANCE 530", "precio": "$120.000", "imagen": "/static/imagen23.png"},
 ]
 
 @app.route("/")
