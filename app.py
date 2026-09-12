@@ -13,7 +13,7 @@ hombres = [
     {"nombre": "AIR JORDAN RETRO 3", "precio": "$120.000", "imagen": "/static/imagen71.png"},
     {"nombre": "AIR JORDAN RETRO 1 LOW", "precio": "$120.000", "imagen": "/static/imagen72.png"},
     {"nombre": "LECOQ SPORTIF", "precio": "$110.000", "imagen": "/static/imagen73.png"},
-    {"nombre": "PUMA SUEDE X BMX", "precio": "$120.000", "imagen": "/static/imagen74.png"},
+    {"nombre": "PUMA SUEDE X BMW", "precio": "$120.000", "imagen": "/static/imagen74.png"},
     {"nombre": "LECOQ SPORTIF", "precio": "$100.000", "imagen": "/static/imagen75.png"},
     {"nombre": "VANS HYLANE", "precio": "$120.000", "imagen": "/static/imagen76.png"},
     {"nombre": "OFF WHITE", "precio": "$120.000", "imagen": "/static/imagen77.png"},
