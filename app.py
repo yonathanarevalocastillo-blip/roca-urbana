@@ -34,7 +34,7 @@ damas = [
     {"nombre": "NIKE DUNK SB LOW", "precio": "$125.000", "imagen": "/static/imagen16.png"},
     {"nombre": "AIR JORDAN RETRO 1", "precio": "$125.000", "imagen": "/static/imagen17.png"},
     {"nombre": "NIKE DUNK SB", "precio": "$120.000", "imagen": "/static/imagen18.png"},
-    {"nombre": "NIKE AIR FORCE ONE", "precio": "$120.000", "imagen": "/static/imagen19.png"},
+    {"nombre": "PUMA PASK", "precio": "$120.000", "imagen": "/static/imagen19.png"},
     {"nombre": "LECOQ SPORTIF", "precio": "$110.000", "imagen": "/static/imagen20.png"},
 ]
 
