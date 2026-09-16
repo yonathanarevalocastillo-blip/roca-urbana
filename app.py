@@ -19,7 +19,6 @@ hombres = [
     {"nombre": "OFF WHITE", "precio": "$120.000", "imagen": "/static/imagen77.png"},
     {"nombre": "ADIDAS SUPERSTAR", "precio": "$120.000", "imagen": "/static/imagen78.png"},
     {"nombre": "NIKE CORTEZ", "precio": "$110.000", "imagen": "/static/imagen79.png"},
-        
 ]
 
 damas = [
@@ -44,6 +43,22 @@ damas = [
 @app.route("/")
 def inicio():
     return render_template("index.html", hombres=hombres, damas=damas)
+
+
+@app.route("/hombres")
+def pagina_hombres():
+    return render_template("hombres.html", hombres=hombres)
+
+
+@app.route("/damas")
+def pagina_damas():
+    return render_template("damas.html", damas=damas)
+
+
+@app.route("/contacto")
+def pagina_contacto():
+    return render_template("contacto.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

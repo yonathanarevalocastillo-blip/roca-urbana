@@ -187,8 +187,21 @@ footer{
   pointer-events: none;
 }
 
-.humo2 { top: 20%; width: 600px; height: 600px; opacity: 0.4; animation-duration: 25s; }
-.humo3 { top: 70%; width: 400px; height: 400px; opacity: 0.5; animation-duration: 30s; }
+.humo2 { 
+  top: 20%; 
+  width: 600px; 
+  height: 600px; 
+  opacity: 0.4; 
+  animation-duration: 25s; 
+}
+
+.humo3 { 
+  top: 70%; 
+  width: 400px; 
+  height: 400px; 
+  opacity: 0.5; 
+  animation-duration: 30s; 
+}
 
 @keyframes humoMove {
   0% {transform: translateX(0) scale(1);}
@@ -246,66 +259,20 @@ function toggleMusica(){
 }
 </script>
 
+<!-- MENÚ -->
 <div class="botones">
-  <a href="#inicio" class="btn">Inicio</a>
-  <a href="#hombres" class="btn">Hombres</a>
-  <a href="#damas" class="btn">Damas</a>
-  <a href="#contacto" class="btn">Contacto</a>
+  <a href="{{ url_for('inicio') }}" class="btn">Inicio</a>
+  <a href="{{ url_for('pagina_hombres') }}" class="btn">Hombres</a>
+  <a href="{{ url_for('pagina_damas') }}" class="btn">Damas</a>
+  <a href="{{ url_for('pagina_contacto') }}" class="btn">Contacto</a>
 </div>
 
-<!-- 🔥 FIX IMPORTANTE -->
+<!-- INICIO -->
 <header id="inicio">
-<img class="logo" src="/static/logo.png">
-<h2>Estilo • Actitud • Calle</h2>
-<p>Suesca - Cundinamarca</p>
+  <img class="logo" src="/static/logo.png">
+  <h2>Estilo • Actitud • Calle</h2>
+  <p>Suesca - Cundinamarca</p>
 </header>
-
-<!-- HOMBRES -->
-<section id="hombres">
-<h2>Hombres</h2>
-
-<div class="productos">
-{% for producto in hombres %}
-  <div class="card">
-    <img src="{{ producto.imagen }}">
-    <h2>{{ producto.nombre }}</h2>
-    <p class="precio">{{ producto.precio }}</p>
-
-    <a class="btn-comprar"
-       href="https://wa.me/573142172714?text=Buen día,%20estoy%20interesado%20en%20el%20producto:%20{{ producto.nombre|urlencode }}%20con%20precio%20de%20{{ producto.precio|urlencode }}.%20¿Podrías%20darme%20más%20información?"
-       target="_blank">
-       Comprar
-    </a>
-  </div>
-{% endfor %}
-</div>
-</section>
-
-<!-- DAMAS -->
-<section id="damas">
-<h2>Damas</h2>
-
-<div class="productos">
-{% for producto in damas %}
-  <div class="card">
-    <img src="{{ producto.imagen }}">
-    <h2>{{ producto.nombre }}</h2>
-    <p class="precio">{{ producto.precio }}</p>
-
-    <a class="btn-comprar"
-       href="https://wa.me/573142172714?text=Buen día,%20estoy%20interesado%20en%20el%20producto:%20{{ producto.nombre|urlencode }}%20con%20precio%20de%20{{ producto.precio|urlencode }}.%20¿Podrías%20darme%20más%20información?"
-       target="_blank">
-       Comprar 
-    </a>
-  </div>
-{% endfor %}
-</div>
-</section>
-
-<section id="contacto">
-<h2>Contacto</h2>
-<p>Instagram: @rocaurbana</p>
-</section>
 
 <footer>
   © 2026 Roca Urbana | @rocaurbana
