@@ -1,280 +1,154 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Roca Urbana</title>
 
 <link rel="icon" type="image/png" href="/static/logo.png">
 
+<!-- ESTILOS -->
+<link rel="stylesheet" href="/static/style.css">
+
+<!-- INTRO Y AJUSTES -->
 <style>
-html { 
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0f0f0f;
-  color:white;
-}
-
-/* BOTONES */
-.botones{
-  display:flex;
-  gap:20px;
-  justify-content:flex-end;
-  padding:20px;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  justify-content:center;
-  background:rgba(15,15,15,0.7);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-}
-
-.btn{
-  background:#111;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#ff3b3b;
-  transform:scale(1.05);
-}
-
-/* HEADER */
-header{
-  text-align:center;
-  padding:40px;
-  padding-top:120px;
-  background:linear-gradient(135deg,#111,#1e1e1e);
-}
-
-/* LOGO ANIMADO */
-.logo{
-  width:1150px;
-  height:600px;
-  border:5px solid rgb(20,20,20);
-  object-fit:cover;
-  animation: glitch 3s infinite, flicker 4s infinite;
-}
-
-@keyframes glitch{
-  0%{transform:translate(0);}
-  20%{transform:translate(-2px,2px);}
-  40%{transform:translate(2px,-2px);}
-  60%{transform:translate(-1px,-1px);}
-  80%{transform:translate(1px,2px);}
-  100%{transform:translate(0);}
-}
-
-@keyframes flicker{
-  0%,100%{
-    filter:brightness(1.1) drop-shadow(0 0 10px rgba(255,0,0,0.5));
-  }
-  50%{
-    filter:brightness(1.3) drop-shadow(0 0 20px rgba(255,0,0,0.8));
-  }
-}
-
-/* PRODUCTOS */
-.productos{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  padding:40px;
-}
-
-.card{
-  background:#1a1a1a;
-  border-radius:15px;
-  width:280px;
-  text-align:center;
-  padding:20px;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-.card img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:12px;
-}
-
-.precio{
-  color:#4da3ff;
-  font-size:22px;
-  font-weight:bold;
-}
-
-/* WHATSAPP BUTTON */
-.btn-comprar{
-  display:inline-block;
-  margin-top:10px;
-  background:#25D366;
-  color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.btn-comprar:hover{
-  transform:scale(1.05);
-  background:#1ebe5d;
-}
-
-/* SECCIONES */
-section{
-  padding:60px 20px;
-  text-align:center;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  background:#111;
-}
-
-/* INTRO */
-#intro{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-  animation:fadeOut 2s ease 2s forwards;
-}
-
-#intro img{
-  width:250px;
-}
-
-@keyframes fadeOut{
-  to{opacity:0;visibility:hidden;}
-}
-
-/* HUMO */
-.humo {
+#intro {
   position: fixed;
-  top: 50%;
-  left: -200px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
-  filter: blur(60px);
-  opacity: 0.6;
-  animation: humoMove 18s linear infinite;
-  z-index: 0;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 2s ease 2s forwards;
 }
 
-.humo2 { 
-  top: 20%; 
-  width: 600px; 
-  height: 600px; 
-  opacity: 0.4; 
-  animation-duration: 25s; 
+#intro img {
+  width: 250px;
+  max-width: 80%;
 }
 
-.humo3 { 
-  top: 70%; 
-  width: 400px; 
-  height: 400px; 
-  opacity: 0.5; 
-  animation-duration: 30s; 
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-@keyframes humoMove {
-  0% {transform: translateX(0) scale(1);}
-  50% {transform: translateX(120vw) scale(1.3);}
-  100% {transform: translateX(240vw) scale(1);}
+#btnMusica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #btnMusica {
+    bottom: 12px;
+    right: 12px;
+  }
 }
 </style>
 </head>
 
 <body onload="window.scrollTo(0,0)">
 
-<div class="humo"></div>
-<div class="humo humo2"></div>
-<div class="humo humo3"></div>
-
+<!-- INTRO -->
 <div id="intro">
-  <img src="/static/logo.png">
+  <img src="/static/logo.png" alt="Roca Urbana">
 </div>
 
+<!-- MUSICA -->
 <audio id="musica" autoplay loop>
   <source src="/static/musica.mp3" type="audio/mpeg">
 </audio>
 
-<button id="btnMusica" onclick="toggleMusica()" 
-style="position:fixed;bottom:20px;right:20px;background:#ff3b3b;color:white;border:none;padding:10px 15px;border-radius:8px;z-index:999;cursor:pointer;">
-▶ Música
+<button id="btnMusica" onclick="toggleMusica()">
+  ▶ Música
 </button>
 
 <script>
 let encendida = false;
 
 window.addEventListener("load", function () {
-  let musica = document.getElementById("musica");
-  let btn = document.getElementById("btnMusica");
+  const musica = document.getElementById("musica");
+  const btn = document.getElementById("btnMusica");
 
-  musica.play().catch(() => {
+  musica.play().then(function () {
+    encendida = true;
+    btn.innerText = "⏸ Pausar";
+  }).catch(function () {
     encendida = false;
     btn.innerText = "▶ Música";
   });
 });
 
-function toggleMusica(){
-  let musica = document.getElementById("musica");
-  let btn = document.getElementById("btnMusica");
+function toggleMusica() {
+  const musica = document.getElementById("musica");
+  const btn = document.getElementById("btnMusica");
 
-  if(encendida){
+  if (encendida) {
     musica.pause();
     encendida = false;
     btn.innerText = "▶ Música";
   } else {
-    musica.play();
-    encendida = true;
-    btn.innerText = "⏸ Pausar";
+    musica.play().then(function () {
+      encendida = true;
+      btn.innerText = "⏸ Pausar";
+    }).catch(function () {
+      encendida = false;
+      btn.innerText = "▶ Música";
+    });
   }
 }
 </script>
 
-<!-- MENÚ -->
-<div class="botones">
+<!-- MENU -->
+<nav class="botones">
   <a href="{{ url_for('inicio') }}" class="btn">Inicio</a>
   <a href="{{ url_for('pagina_hombres') }}" class="btn">Hombres</a>
   <a href="{{ url_for('pagina_damas') }}" class="btn">Damas</a>
   <a href="{{ url_for('pagina_contacto') }}" class="btn">Contacto</a>
-</div>
+</nav>
 
 <!-- INICIO -->
 <header id="inicio">
-  <img class="logo" src="/static/logo.png">
+
+  <!-- HUMO ANIMADO SOLO ALREDEDOR DEL LOGO -->
+  <div class="logo-container">
+
+    <div class="humo humo-rojo"></div>
+    <div class="humo humo-azul"></div>
+    <div class="humo-central"></div>
+
+    <img
+      class="logo"
+      src="/static/logo.png"
+      alt="Logo Roca Urbana"
+    >
+
+  </div>
+
   <h2>Estilo • Actitud • Calle</h2>
+
   <p>Suesca - Cundinamarca</p>
+
   <p>Yonathan Arevalo</p>
+
 </header>
 
+<!-- PIE DE PAGINA -->
 <footer>
   © 2026 Roca Urbana | @rocaurbana
 </footer>

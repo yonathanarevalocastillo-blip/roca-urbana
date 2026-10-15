@@ -1,181 +1,338 @@
-html { 
+
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
 }
 
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0f0f0f;
-  color:white;
-  overflow-x:hidden;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
   position: relative;
 }
 
-/* 🔥 MENÚ FLOTANTE */
-.botones{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  display:flex;
-  gap:15px;
-  justify-content:center;
-  padding:15px;
-  background:rgba(0,0,0,0.75);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+/* MENU FLOTANTE */
+.botones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
-.botones a{
-  color:white;
-  text-decoration:none;
-  background:#222;
-  padding:10px 15px;
-  border-radius:8px;
-  transition:0.3s;
+.botones a {
+  color: white;
+  text-decoration: none;
+  background: #222;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.botones a:hover{
-  background:red;
+.botones a:hover {
+  background: red;
 }
 
 /* BOTONES GENERALES */
-.btn{
-  background:#111;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:10px;
-  transition:0.3s;
+.btn {
+  background: #111;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.btn:hover{
-  background:#ff3b3b;
-  transform:scale(1.05);
+.btn:hover {
+  background: #ff3b3b;
+  transform: scale(1.05);
 }
 
 /* HEADER */
-header{
-  text-align:center;
-  padding:60px 20px 20px;
-  background:linear-gradient(135deg,#111,#1e1e1e);
-  position:relative;
-  z-index:2;
+header {
+  text-align: center;
+  padding: 120px 20px 20px;
+  background: linear-gradient(135deg, #111, #1e1e1e);
+  position: relative;
+  z-index: 2;
+}
+
+/* CONTENEDOR DEL LOGO Y HUMO */
+.logo-container {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 0;
+  box-sizing: border-box;
+}
+
+/* HUMO ROJO Y AZUL */
+.humo {
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  width: 42%;
+  height: 90%;
+  border-radius: 50%;
+  filter: blur(35px);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* HUMO ROJO A LA IZQUIERDA */
+.humo-rojo {
+  left: -2%;
+  background:
+    radial-gradient(
+      ellipse at 35% 35%,
+      rgba(255, 0, 35, 0.85),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 60% 65%,
+      rgba(255, 20, 50, 0.55),
+      transparent 65%
+    );
+  animation: humoRojo 8s ease-in-out infinite alternate;
+}
+
+/* HUMO AZUL A LA DERECHA */
+.humo-azul {
+  right: -2%;
+  background:
+    radial-gradient(
+      ellipse at 65% 35%,
+      rgba(0, 100, 255, 0.85),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 35% 65%,
+      rgba(0, 190, 255, 0.55),
+      transparent 65%
+    );
+  animation: humoAzul 10s ease-in-out infinite alternate;
+}
+
+/* HUMO CENTRAL */
+.humo-central {
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  height: 75%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(80, 0, 140, 0.25),
+      transparent 70%
+    );
+  filter: blur(40px);
+  pointer-events: none;
+  animation: humoCentral 12s ease-in-out infinite alternate;
+}
+
+/* MOVIMIENTO DEL HUMO */
+@keyframes humoRojo {
+  0% {
+    transform: translate(-5%, 3%) scale(0.9) rotate(-5deg);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate(12%, -5%) scale(1.2) rotate(8deg);
+    opacity: 1;
+  }
+}
+
+@keyframes humoAzul {
+  0% {
+    transform: translate(5%, -4%) scale(1.1) rotate(5deg);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate(-12%, 5%) scale(0.9) rotate(-8deg);
+    opacity: 1;
+  }
+}
+
+@keyframes humoCentral {
+  0% {
+    transform: scale(0.9) translateY(3%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.15) translateY(-3%);
+    opacity: 0.8;
+  }
 }
 
 /* LOGO */
-.logo{
-  width:1150px;
-  height:600px;
-  border:5px solid rgb(20,20,20);
-  object-fit:cover;
+.logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 1150px;
+  height: auto;
+  max-height: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 5px solid rgb(20, 20, 20);
+  object-fit: contain;
   animation: glitch 3s infinite, flicker 4s infinite;
 }
 
 /* GLITCH */
-@keyframes glitch{
-  0%{transform:translate(0);}
-  20%{transform:translate(-2px,2px);}
-  40%{transform:translate(2px,-2px);}
-  60%{transform:translate(-1px,-1px);}
-  80%{transform:translate(1px,2px);}
-  100%{transform:translate(0);}
+@keyframes glitch {
+  0%   { transform: translate(0); }
+  20%  { transform: translate(-2px, 2px); }
+  40%  { transform: translate(2px, -2px); }
+  60%  { transform: translate(-1px, -1px); }
+  80%  { transform: translate(1px, 2px); }
+  100% { transform: translate(0); }
 }
 
-/* FLICKER */
-@keyframes flicker{
-  0%,100%{
-    filter:brightness(1.1) drop-shadow(0 0 10px rgba(255,0,0,0.5));
+/* BRILLO DEL LOGO */
+@keyframes flicker {
+  0%, 100% {
+    filter: brightness(1.1)
+      drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
   }
-  50%{
-    filter:brightness(1.3) drop-shadow(0 0 20px rgba(255,0,0,0.8));
+  50% {
+    filter: brightness(1.3)
+      drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
   }
 }
 
 /* PRODUCTOS */
-.productos{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  padding:40px;
+.productos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px;
 }
 
 /* TARJETAS */
-.card{
-  background:#111;
-  border-radius:15px;
-  width:280px;
-  text-align:center;
-  padding:20px;
-  transition:.3s;
-  position:relative;
-  z-index:2;
+.card {
+  background: #111;
+  border-radius: 15px;
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
 }
 
-.card:hover{
-  transform:translateY(-10px) scale(1.03);
-  box-shadow:0 10px 25px rgba(255,0,0,0.3);
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
 }
 
-.card img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:12px;
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.precio{
-  color:#4da3ff;
-  font-size:22px;
-  font-weight:bold;
+.precio {
+  color: #4da3ff;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-/* WHATSAPP BUTTON */
-.btn-comprar{
-  display:inline-block;
-  margin-top:10px;
-  background:#25D366;
-  color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  text-decoration:none;
+/* BOTON WHATSAPP */
+.btn-comprar {
+  display: inline-block;
+  margin-top: 10px;
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-comprar:hover {
+  background: #1ebe5d;
 }
 
 /* SECCIONES */
-section{
-  padding:60px 20px;
-  text-align:center;
-  position:relative;
-  z-index:2;
+section {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-footer{
-  text-align:center;
-  padding:30px;
-  background:#111;
-  position:relative;
-  z-index:2;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  position: relative;
+  z-index: 2;
 }
 
-/* 💨 HUMO SUAVE */
-body::before{
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(255,0,0,0.05), transparent 40%);
-  animation: humo 6s infinite alternate;
-  pointer-events:none;
-  z-index:0;
+/* ADAPTACION A CELULARES */
+@media (max-width: 600px) {
+  .botones {
+    gap: 6px;
+    padding: 10px 5px;
+  }
+
+  .botones a {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  header {
+    padding: 100px 10px 20px;
+  }
+
+  .logo-container {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .logo {
+    width: 100%;
+    max-height: none;
+    border-width: 3px;
+  }
+
+  .humo {
+    filter: blur(22px);
+  }
+
+  .humo-central {
+    filter: blur(28px);
+  }
+
+  .productos {
+    padding: 20px 10px;
+  }
 }
 
-@keyframes humo{
-  0%{transform:scale(1) translateY(0);}
-  100%{transform:scale(1.1) translateY(-10px);}
+/* RESPETAR PREFERENCIA DE MENOS MOVIMIENTO */
+@media (prefers-reduced-motion: reduce) {
+  .humo-rojo,
+  .humo-azul,
+  .humo-central {
+    animation: none;
+  }
 }
