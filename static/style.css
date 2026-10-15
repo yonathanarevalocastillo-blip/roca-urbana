@@ -76,110 +76,123 @@ header {
   margin: 0 auto;
   padding: 18px 0;
   box-sizing: border-box;
+  overflow: visible;
 }
 
-/* HUMO ROJO Y AZUL */
+/* HUMO ANIMADO */
 .humo {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 5%;
-  width: 42%;
+  width: 48%;
   height: 90%;
   border-radius: 50%;
   filter: blur(35px);
   pointer-events: none;
   will-change: transform, opacity;
+  mix-blend-mode: screen;
 }
 
-/* HUMO ROJO A LA IZQUIERDA */
+/* HUMO ROJO */
 .humo-rojo {
   left: -2%;
   background:
     radial-gradient(
       ellipse at 35% 35%,
-      rgba(255, 0, 35, 0.85),
-      transparent 70%
+      rgba(255, 0, 35, 0.9) 0%,
+      rgba(255, 0, 35, 0.45) 35%,
+      transparent 72%
     ),
     radial-gradient(
       ellipse at 60% 65%,
-      rgba(255, 20, 50, 0.55),
-      transparent 65%
+      rgba(255, 20, 50, 0.7) 0%,
+      transparent 68%
     );
-  animation: humoRojo 8s ease-in-out infinite alternate;
+  animation: humoRojo 7s ease-in-out infinite alternate;
 }
 
-/* HUMO AZUL A LA DERECHA */
+/* HUMO AZUL */
 .humo-azul {
   right: -2%;
   background:
     radial-gradient(
       ellipse at 65% 35%,
-      rgba(0, 100, 255, 0.85),
-      transparent 70%
+      rgba(0, 100, 255, 0.9) 0%,
+      rgba(0, 100, 255, 0.45) 35%,
+      transparent 72%
     ),
     radial-gradient(
       ellipse at 35% 65%,
-      rgba(0, 190, 255, 0.55),
-      transparent 65%
+      rgba(0, 190, 255, 0.7) 0%,
+      transparent 68%
     );
-  animation: humoAzul 10s ease-in-out infinite alternate;
+  animation: humoAzul 8s ease-in-out infinite alternate;
 }
 
-/* HUMO CENTRAL */
+/* HUMO CENTRAL VIOLETA */
 .humo-central {
   position: absolute;
-  z-index: -1;
-  top: 20%;
+  z-index: 0;
+  top: 15%;
   left: 15%;
   width: 70%;
   height: 75%;
   border-radius: 50%;
   background:
     radial-gradient(
-      ellipse,
-      rgba(80, 0, 140, 0.25),
-      transparent 70%
+      ellipse at center,
+      rgba(100, 0, 180, 0.4),
+      rgba(40, 0, 100, 0.15) 45%,
+      transparent 72%
     );
   filter: blur(40px);
   pointer-events: none;
-  animation: humoCentral 12s ease-in-out infinite alternate;
+  animation: humoCentral 10s ease-in-out infinite alternate;
 }
 
-/* MOVIMIENTO DEL HUMO */
+/* MOVIMIENTO DEL HUMO ROJO */
 @keyframes humoRojo {
   0% {
-    transform: translate(-5%, 3%) scale(0.9) rotate(-5deg);
+    transform: translate(-8%, 4%) scale(0.85) rotate(-8deg);
     opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
     transform: translate(12%, -5%) scale(1.2) rotate(8deg);
-    opacity: 1;
+    opacity: 0.85;
   }
 }
 
+/* MOVIMIENTO DEL HUMO AZUL */
 @keyframes humoAzul {
   0% {
-    transform: translate(5%, -4%) scale(1.1) rotate(5deg);
+    transform: translate(8%, -4%) scale(1.1) rotate(8deg);
     opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
     transform: translate(-12%, 5%) scale(0.9) rotate(-8deg);
-    opacity: 1;
+    opacity: 0.85;
   }
 }
 
+/* MOVIMIENTO DEL HUMO CENTRAL */
 @keyframes humoCentral {
   0% {
-    transform: scale(0.9) translateY(3%);
+    transform: scale(0.85) translateY(3%);
     opacity: 0.4;
   }
   100% {
     transform: scale(1.15) translateY(-3%);
-    opacity: 0.8;
+    opacity: 0.85;
   }
 }
 
-/* LOGO */
+/* LOGO ENCIMA DEL HUMO */
 .logo {
   position: relative;
   z-index: 1;
@@ -195,14 +208,26 @@ header {
   animation: glitch 3s infinite, flicker 4s infinite;
 }
 
-/* GLITCH */
+/* GLITCH DEL LOGO */
 @keyframes glitch {
-  0%   { transform: translate(0); }
-  20%  { transform: translate(-2px, 2px); }
-  40%  { transform: translate(2px, -2px); }
-  60%  { transform: translate(-1px, -1px); }
-  80%  { transform: translate(1px, 2px); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 /* BRILLO DEL LOGO */
