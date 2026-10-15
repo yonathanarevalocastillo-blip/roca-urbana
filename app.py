@@ -19,6 +19,17 @@ hombres = [
     {"nombre": "OFF WHITE", "precio": "$120.000", "imagen": "/static/imagen77.png"},
     {"nombre": "ADIDAS SUPERSTAR", "precio": "$120.000", "imagen": "/static/imagen78.png"},
     {"nombre": "NIKE CORTEZ", "precio": "$110.000", "imagen": "/static/imagen79.png"},
+    {"nombre": "ADIDAS GLOW", "precio": "$120.000", "imagen": "/static/imagen80.png"},
+    {"nombre": "ADIDAS GLOW", "precio": "$120.000", "imagen": "/static/imagen81.png"},
+    {"nombre": "ADIDAS ADISTAR", "precio": "$125.000", "imagen": "/static/imagen82.png"},
+    {"nombre": "NIKE VOMERO PLUS", "precio": "$120.000", "imagen": "/static/imagen83.png"},
+    
+    
+    
+    
+    
+    
+    
 ]
 
 damas = [
@@ -38,6 +49,23 @@ damas = [
     {"nombre": "AIR JORDANRETRO 3", "precio": "$120.000", "imagen": "/static/imagen21.png"},
     {"nombre": "ADIDAS SAMBA", "precio": "$120.000", "imagen": "/static/imagen22.png"},
     {"nombre": "NEW BALANCE 530", "precio": "$120.000", "imagen": "/static/imagen23.png"},
+    {"nombre": "ADIDAS NIZZA", "precio": "$100.000", "imagen": "/static/imagen24.png"},
+    {"nombre": "ADIDAS NIZZA", "precio": "$100.000", "imagen": "/static/imagen25.png"},
+    {"nombre": "ADIDAS SUPERSTAR", "precio": "$100.000", "imagen": "/static/imagen26.png"},
+    {"nombre": "ADIDAS SUPERSTAR", "precio": "$100.000", "imagen": "/static/imagen27.png"},
+    {"nombre": "NIKE VK", "precio": "$120.000", "imagen": "/static/imagen28.png"},
+    {"nombre": "ADIDAS GLOW", "precio": "$120.000", "imagen": "/static/imagen29.png"},
+    {"nombre": "ADIDAS GLOW", "precio": "$120.000", "imagen": "/static/imagen30.png"},
+    {"nombre": "NEW BALANCE 530 EMCAP", "precio": "$110.000", "imagen": "/static/imagen31.png"},
+    {"nombre": "ADIDAS MAGMA", "precio": "$120.000", "imagen": "/static/imagen32.png"},
+    {"nombre": "ADIDAS MAGMA", "precio": "$120.000", "imagen": "/static/imagen33.png"},
+    {"nombre": "ADIDAS MAGMA", "precio": "$120.000", "imagen": "/static/imagen34.png"},
+    {"nombre": "NIKE VOMERO PLUS", "precio": "$120.000", "imagen": "/static/imagen35.png"},
+    {"nombre": "NIKE VOMERO PLUS", "precio": "$120.000", "imagen": "/static/imagen36.png"},
+    {"nombre": "NIKE COMFORT RIDE", "precio": "$120.000", "imagen": "/static/imagen37.png"},
+    
+    
+    
 ]
 
 @app.route("/")
