@@ -3,6 +3,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 hombres = [
+    {"nombre": "PUMA SUEDE XL x BMW", "precio": "$100.000", "imagen": "/static/imagen84.png"},
+    {"nombre": "PUMA SUEDE XL x BMW", "precio": "$100.000", "imagen": "/static/imagen85.png"},
+    {"nombre": "ARMANI EXCHANGE", "precio": "$120.000", "imagen": "/static/imagen86.png"},
+    {"nombre": "NIKE AIR FORCÉ ONE • AF1 ", "precio": "$120.000", "imagen": "/static/imagen87.png"},   
     {"nombre": "NIKE DUNK SB", "precio": "$100.000", "imagen": "/static/imagen1.png"},
     {"nombre": "AIR JORDAN RETRO 1 LOW", "precio": "$105.000", "imagen": "/static/imagen2.png"},
     {"nombre": "ADIDAS NASTASE", "precio": "$100.000", "imagen": "/static/imagen3.png"},
@@ -33,6 +37,14 @@ hombres = [
 ]
 
 damas = [
+    {"nombre": "NIKE COURT LEGACY ", "precio": "$120.000", "imagen": "/static/imagen38.png"},
+    {"nombre": "NIKE COURT LEGACY ", "precio": "$120.000", "imagen": "/static/imagen39.png"},
+    {"nombre": "VANS HYLANE ", "precio": "$110.000", "imagen": "/static/imagen40.png"},
+    {"nombre": "ADIDAS TERREX  ", "precio": "$100.000", "imagen": "/static/imagen41.png"},
+    {"nombre": "ALO  ", "precio": "$90.000", "imagen": "/static/imagen42.png"},
+    {"nombre": "ALO  ", "precio": "$90.000", "imagen": "/static/imagen43.png"},
+    {"nombre": "NEW BALANCE 574 ", "precio": "$115.000", "imagen": "/static/imagen44.png"},
+    {"nombre": "NIKE DUNK SB", "precio": "$110.000", "imagen": "/static/imagen45.png"},   
     {"nombre": "NIKE SKATE", "precio": "$100.000", "imagen": "/static/imagen8.png"},
     {"nombre": "ADIDAS SUPER STAR", "precio": "$110.000", "imagen": "/static/imagen9.png"},
     {"nombre": "AIR JORDAN RETRO 1 LOW", "precio": "$105.000", "imagen": "/static/imagen10.png"},
