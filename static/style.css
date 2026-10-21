@@ -283,6 +283,9 @@ header {
 
 /* BOTON WHATSAPP */
 
+
+/* 🟢 BOTÓN PEDIR POR WHATSAPP */
+
 .btn-pedir-whatsapp {
   display: inline-block;
   margin-top: 10px;
@@ -293,6 +296,7 @@ header {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn-pedir-whatsapp:hover {
