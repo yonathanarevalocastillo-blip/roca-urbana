@@ -286,22 +286,30 @@ header {
 
 /* 🟢 BOTÓN PEDIR POR WHATSAPP */
 
-.btn-pedir-whatsapp {
+
+/* BOTÓN WHATSAPP - ROCA URBANA */
+a.btn-pedir-whatsapp,
+a.btn-pedir-whatsapp:link,
+a.btn-pedir-whatsapp:visited {
   display: inline-block;
   margin-top: 10px;
-  background: #25D366;
-  color: white;
+  background-color: #25D366 !important;
+  color: #ffffff !important;
   padding: 10px 15px;
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: bold;
+  border: none;
   transition: 0.3s;
   cursor: pointer;
 }
 
-.btn-pedir-whatsapp:hover {
+a.btn-pedir-whatsapp:hover,
+a.btn-pedir-whatsapp:focus {
+  background-color: #1ebe5d !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
   transform: scale(1.05);
-  background: #1ebe5d;
 }
 
 
