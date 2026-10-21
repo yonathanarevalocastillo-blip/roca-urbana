@@ -282,7 +282,8 @@ header {
 }
 
 /* BOTON WHATSAPP */
-.btn-Pedir por whatsApp {
+
+.btn-pedir-whatsapp {
   display: inline-block;
   margin-top: 10px;
   background: #25D366;
@@ -290,11 +291,15 @@ header {
   padding: 10px 15px;
   border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.btn-Pedir por whatsApp:hover {
+.btn-pedir-whatsapp:hover {
+  transform: scale(1.05);
   background: #1ebe5d;
 }
+
 
 /* SECCIONES */
 section {
