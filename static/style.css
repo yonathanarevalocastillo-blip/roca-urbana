@@ -282,7 +282,7 @@ header {
 }
 
 /* BOTON WHATSAPP */
-.btn-Pedir por whatsApp {
+.btn- Pedir por whatsApp {
   display: inline-block;
   margin-top: 10px;
   background: #25D366;
@@ -292,7 +292,7 @@ header {
   text-decoration: none;
 }
 
-.btn-Pedir por whatsApp:hover {
+.btn- Pedir por whatsApp:hover {
   background: #1ebe5d;
 }
 
