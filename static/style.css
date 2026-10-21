@@ -275,37 +275,25 @@ header {
   border-radius: 12px;
 }
 
-/* PRECIO EN BLANCO */
 .precio {
-  color: #ffffff !important;
+  color: #4da3ff;
   font-size: 22px;
   font-weight: bold;
 }
 
-/* BOTÓN WHATSAPP CON CONTORNO VERDE */
-a.btn-pedir-whatsapp,
-a.btn-pedir-whatsapp:link,
-a.btn-pedir-whatsapp:visited {
+/* BOTON WHATSAPP */
+.btn-comprar {
   display: inline-block;
   margin-top: 10px;
-  background-color: transparent !important;
-  color: #ffffff !important;
+  background: #25D366;
+  color: white;
   padding: 10px 15px;
-  border: 2px solid #25D366 !important;
   border-radius: 8px;
-  text-decoration: none !important;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-a.btn-pedir-whatsapp:hover,
-a.btn-pedir-whatsapp:focus {
-  background-color: #25D366 !important;
-  border-color: #25D366 !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  transform: scale(1.05);
+.btn-comprar:hover {
+  background: #1ebe5d;
 }
 
 /* SECCIONES */

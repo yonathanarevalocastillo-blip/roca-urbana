@@ -89,9 +89,9 @@ body{
   font-weight:bold;
 }
 
-/* 🟢 Pedir por whatsApp */
+/* 🟢 COMPRAR */
 
-.btn-Pedir por whatsApp{
+.btn-comprar{
   display:inline-block;
   margin-top:10px;
   background:#25D366;
@@ -102,7 +102,7 @@ body{
   font-weight:bold;
 }
 
-.btn-Pedir por whatsApp:hover{
+.btn-comprar:hover{
   transform:scale(1.05);
   background:#1ebe5d;
 }
@@ -238,13 +238,14 @@ footer{
   {{ producto.precio }}
 </p>
 
-
-<a class="btn-pedir-whatsapp"
-   href="https://wa.me/573142172714?text=Buen%20día,%20estoy%20interesado%20en%20el%20producto:%20{{ producto.nombre|urlencode }}%20con%20precio%20de%20{{ producto.precio|urlencode }}.%20¿Podrías%20darme%20más%20información?"
-   target="_blank"
-   rel="noopener noreferrer">
-  Pedir por WhatsApp
+<a
+  class="btn-comprar"
+  href="https://wa.me/573142172714?text=Buen día,%20estoy%20interesado%20en%20el%20producto:%20{{ producto.nombre|urlencode }}%20con%20precio%20de%20{{ producto.precio|urlencode }}.%20¿Podrías%20darme%20más%20información?"
+  target="_blank"
+>
+  Comprar
 </a>
+
 </div>
 
 {% endfor %}
